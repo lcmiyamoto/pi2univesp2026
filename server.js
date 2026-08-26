@@ -1,8 +1,9 @@
 require('dotenv').config();
+require("node:dns/promises").setServers(["1.1.1.1", "8.8.8.8"]);
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-mongoose.connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.CONNECTIONSTRING,)
   .then(() => {
     app.emit('pronto');
   })
@@ -24,7 +25,7 @@ app.use(express.static(path.resolve(__dirname, 'public')));
 
 const sessionOptions = session({
   secret: 'akasdfj0út23453456+54qt23qv  qwf qwer qwer qewr asdasdasda a6()',
-  store: MongoStore.create({ mongoUrl: process.env.CONNECTIONSTRING }),
+ // store: MongoStore.create({ mongoUrl: process.env.CONNECTIONSTRING }),
   resave: false,
   saveUninitialized: false,
   cookie: {

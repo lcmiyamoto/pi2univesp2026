@@ -1,20 +1,41 @@
-<%- include('includes/head'); %>
-
-<section class="container">
-  <!--  <h1><%= csrfToken %></h1>  --> 
-    <h1>Projeto Integrador Univesp </h1>
-    <h2>Segundo Semestre 2026</h2>
-    <p>Tema do PI: "Desenvolver um software com framework web que utilize banco de dados, inclua script web (Javascript), nuvem, uso de API, acessibilidade, controle de versão e testes. Opcionalmente, incluir análise de dados."</h3>
- 
-  <!-- 
-  <form action="/" method="post">
-  <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-    <label>Cliente</label>
-    <input type="text" name="cliente">
-    <button>Submit</button> 
-
-
-  </form> --> 
-</section>
-
-<%- include('includes/footer'); %>
+<%- include('includes/head') %>
+  <%- include('includes/nav') %>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 my-3">
+          <div class="text-center">
+            <h1>Usuários</h1>
+            <p class="text-center lead">Sistema de cadastro de usuários</p>
+            <div class="row">
+              <div class="col my-3">
+                <div class="alert alert-danger" role="alert">
+                  Erro ao cadastrar usuário.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="responsive-table">
+            <table class="table">
+            <tr>
+              <td>Miyamoto</td>
+              <td>d12323</td>
+            </tr>
+            <tr>
+              <td>Martins</td>
+              <td>d45678</td>
+            </tr>
+            <tr>
+              <td>Alan</td>
+              <td>d98765</td>
+            </tr>
+            <tr>
+              <td>Alexandre</td>
+              <td>d54321</td>
+            </tr>
+            </table>
+          </div>
+        </div>
+        <div class="col-lg-2"></div>
+      </div>
+      <%- include('includes/footer') %>
