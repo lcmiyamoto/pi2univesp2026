@@ -21,4 +21,9 @@ exports.register = async function(req, res) {
         req.session.save(function() {
          return res.redirect('/login/index');
         });
+
+};
+
+exports.login  =  (req, res) => {
+    res.render('login');
 };
