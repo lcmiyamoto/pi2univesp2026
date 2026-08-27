@@ -14,21 +14,26 @@ class Login {
     this.errors = [];
     this.user = null;
   }
-
-  register() {
+    
+  async register() {
     this.valida();
     if (this.errors.length > 0) return;
+    try {
+       this.user = await LoginModel.create(this.body);
+    } catch(e) {
+      console.log(e);
+    }
   }
-
+ 
   valida() {
     this.cleanUp();
-
-    //Validação
+   //Validação
     //O email precisa ser válido
     if (!validator.isEmail(this.body.email)) this.errors.push('E-mail inválido');
+    
     //A senha precisa ter entre 3 e 50 caracteres
     if (this.body.password.length < 3 || this.body.password.length > 50) {
-      this.errors.push('A senha precisa ter entre 3 e 50 caracteres');
+     this.errors.push('A senha precisa ter entre 3 e 50 caracteres');
     }
   }
 
