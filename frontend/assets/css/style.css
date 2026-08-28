@@ -1,0 +1,13 @@
+.body {
+    background: rgb(113, 180, 196);
+    font-family: 'Open sans', sans-serif;
+    font-size: 2.0em;
+    line-height: 2.5;
+}
+
+.container {
+    background: rgb(167, 196, 113);
+    font-family: 'Open sans', sans-serif;
+    font-size: 5.0em;
+    line-height: 2.5;
+}
