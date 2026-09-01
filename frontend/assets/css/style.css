@@ -5,7 +5,7 @@
     --primary-color-darker: rgb(39, 57, 150);
 }
 
-@media (min-width:992px) {
+@media (min-width:768px) {
     .dropdown>.drodown-menu {
         visibility: hidden;
         opacity: 0;
@@ -15,7 +15,7 @@
     }
 
     .drodown:hover>.drodown-menu{
-        padding:20px 0;
+        padding:10px 0;
         display: block;
         visibility: visible;
         transition: all 0.3s ease-in-out
@@ -34,7 +34,10 @@
 }
 
 .quadro-texto {
-    background-color:  RGB (221, 201, 169);
+    max-width: 768px;
+    margin: 50px auto;
+    background-color:  #f5ece3;
+    padding: 25px;
 }
 
 body {
@@ -46,11 +49,33 @@ body {
     line-height: 1.5em;
 }
 
+h1 {
+  font-size: 2.5em; 
+}
+
+h2 {
+  font-size: 1.875em; 
+}
+
+h3 {
+  font-size: 1.406em; 
+}
+
+h4 {
+  font-size: 1.054em; 
+}
+
+
+
+p {
+  font-size: 1em; 
+}
+
 .container {
-    max-width: 640px;
+    max-width: 768px;
     margin: 50px auto;
     background: #fff;
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
 }
 
